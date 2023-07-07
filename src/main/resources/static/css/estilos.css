@@ -1,0 +1,82 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 12 jun 2023, 12:47:13
+    Author     : laicy
+*/
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+    body {
+    padding:80px 20px 0;
+    background-color: skyblue;
+    font-family: sans-serif;
+}
+
+
+
+.header {
+    position: fixed;
+    background-color:cadetblue ;
+    height: 80px;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.nav{
+ display: flex;
+   justify-content: space-between;
+   margin: 0 auto;
+}
+
+.nav-link{
+    text-decoration: none;
+    color: #024070;
+}
+.logo{
+    font-size: 30px;
+    font-weight: lighter;
+    padding: 0 40px;
+    line-height: 80px;
+}
+.nav-menu{
+    display: flex;
+    margin-right: 40px;
+    list-style:outside;
+    color: #024070;
+}
+.nav-menu-item{
+    font-size: 18px;
+    margin: 0 10px;
+    line-height: 80px;
+}
+.nav-menu-link{
+    padding: 8px 12px;
+}
+.nav-menu-link:hover{
+    background-color: aquamarine;
+    border-radius: 60px;
+}
+footer {
+   text-align: center;
+      color: black;
+}
+h2{
+  color: #024070;  
+}
+.footer{
+    position: fixed;
+    background-color: beige; 
+    text-align: center;
+    height: 20px;
+    left: 0;
+    right: 0;
+}
+.section{
+    text-align: center;
+}

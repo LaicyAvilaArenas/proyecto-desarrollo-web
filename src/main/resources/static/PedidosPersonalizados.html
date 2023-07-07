@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Dulces del Cielo</title>
+        <meta charset="UTF-8"> 
+        <link href="css/Estilomenuprincipalycategorias.css" rel="stylesheet" type="text/css"/>  
+    </head>
+    <body>
+        <header class="header">
+            <nav class="nav">
+        <img src="../Imagenes/dulces del cielo logo recortado.jpg" alt="Logo de pasteleria" width="100" />
+        <a class="nav-link logo" href="index.html">Pastelería y Repostería</a>
+        <a class="nav-link logo" href="index.html"> por Luana Marchena</a>
+        <ul class="nav-menu">
+            <li class="nav-menu-item"><a class="nav-link nav-menu-link" href="principal.html">Inicio</a></li> 
+            <li class="nav-menu-item"><a class="nav-link nav-menu-link" href="AcercaDe.html">Acerca de</a></li>     
+            <li class="nav-menu-item"><a class="nav-link nav-menu-link" href="pedidos.html">Pedidos</a></li> 
+            <li class="nav-menu-item"><a class="nav-link nav-menu-link" href="contacto.html">Contacto</a></li> 
+            <li class="nav-menu-item"><a class="nav-link nav-menu-link" href="principal.html">Instagram</a></li> 
+            <li class="nav-menu-item"><a class="nav-link nav-menu-link" href="principal.html">Facebook</a></li>
+            
+        </ul>
+        </nav>
+        </header>
+    <main class="violeta">
+            <section class="contacto">
+                <div>
+                    <h2>CONTÁCTAME</h2>
+                    <p>Nuestro horario de Atención:</p> 
+                    <p>Lunes a viernes: 9:00 am a 5:00 pm 
+                    <p>Sábado: 9:00 am a 1:00 pm</p>
+                    <p>Domingos: Según disponibilidad en agenda</p>
+                    <p>Puedes hacer tus pedidos por estos medios</p>
+                    <p>Numero de teléfono | Pedir Online aquí</p>
+                    <p>+50672564345</p>
+                </div>
+            </section>
+            <form class="form" action="procesar_formulario.php" method="POST">
+                <h3>Información Personal</h3>
+                <div>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div>
+                    <label for="apellidos">Apellidos:</label>
+                    <input type="text" id="apellidos" name="apellidos" required>
+                </div>
+                <div>
+                    <label for="cedula">Cédula:</label>
+                    <input type="text" id="cedula" name="cedula" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" required>
+                </div>
+                <h3>Detalles del Pedido</h3>
+                <div>
+                    <label for="sabor">Sabor:</label>
+                    <input type="text" id="sabor" name="sabor" required>
+                </div>
+                <div>
+                    <label for="porciones">Porciones:</label>
+                    <input type="number" id="porciones" name="porciones" required>
+                </div>
+                <div>
+                    <label for="forma_pago">Forma de Pago:</label>
+                    <select id="forma_pago" name="forma_pago" required>
+                        <option value="">Seleccionar</option>
+                        <option value="efectivo">Efectivo</option>
+                        <option value="tarjeta">Tarjeta de Crédito</option>
+                        <option value="transferencia">Transferencia Bancaria</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="colores_preferencia">Colores de Preferencia:</label>
+                    <input type="text" id="colores_preferencia" name="colores_preferencia" required>
+                </div>
+                <div>
+                    <label for="descripcion">Descripción Detallada:</label>
+                    <textarea id="descripcion" name="descripcion" required></textarea>
+                </div>
+                <div>
+                    <button type="submit">Enviar</button>
+                </div>
+            </form>
+        </main>
+        <br>
+        <footer>
+            <p class="pie"> Derechos Reservados &COPY; 2023</p>
+        </footer>
+        
+    </body>
+</html>
