@@ -7,8 +7,7 @@ import com.pasteleria.domain.Pedidos;
 import java.util.List;
 
 public interface PedidosService {
-  public List<Pedidos> getPedidoss(boolean activos);  
-  
+
   //metodos CRUD
   // Se obtiene un Pedidos, a partir del id de un pedidos
     public Pedidos getPedidos(Pedidos pedidos);
