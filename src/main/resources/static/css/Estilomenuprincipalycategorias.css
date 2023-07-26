@@ -83,6 +83,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
     margin-right: 40px;
     list-style:outside;
     color: #ffffff;
+    
+}
+.nav-menu2{
+    display: flex;
+    margin-right: 40px;
+    list-style:outside;
+    color: #F9D6E8;
+    
 }
 .nav-menu-item{
     font-size: 18px;
@@ -101,6 +109,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
    height: 50px;
    background-color: turquoise;
    color: white;
+  
       
 }
 .form {
@@ -129,9 +138,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
   text-align: center;
    background-color: #F9D6E8;
    color: #707070;
-   height: 980px;
-   left:40;
-   right: 40;  
+   height: 850px;
+   margin: 0px 50px 0px 50px; /* arriba derecha abajo izquierda*/ 
 }
 .violeta {
     background-color: #CEB4D5;
@@ -150,18 +158,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
     text-align: center;
     color: black;
 }
-.cajasdeinformacion{
-    background-color: #ffffff;
-    padding: 29 px; 
-    width: 30%;
-}
-    .izquierda{
-        text-align: rigth;
-    }  
-    
 
 .parrafo-caja-info{
     text-align: justify-all;
+    margin: 20px;
     color: #9A59AB;
 }
 .opciones-nav{
@@ -175,7 +175,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
    text-align: center;
    display: flex;
    font-size: 18px;
-   margin: 0;
+   margin: 50px;
    line-height: 25px;
    justify-content: space-between;
 }
@@ -195,4 +195,25 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
    font-size: 18px;
     margin: 0 10px;
     line-height: 80px;
+}
+
+.tortasfrias{
+   
+   text-align: center;
+   display: flex;
+   font-size: 20px;
+   margin: 0px 0px 0px 50px; /* arriba derecha abajo izquierda*/
+   line-height: 18px;
+   width: 450px;
+   justify-content: space-between;
+   
+}
+
+.cajasdeinformacion{
+    display: flex;
+    align-content: center;
+    background-color: #ffffff; 
+    width: 450px;
+    justify-content : space-between;
+    margin: 40px;
 }

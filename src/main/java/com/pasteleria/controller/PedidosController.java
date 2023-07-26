@@ -3,7 +3,7 @@ package com.pasteleria.controller;
 
 import com.pasteleria.domain.Pedidos;
 import com.pasteleria.service.PedidosService;
-import com.pasteleria.service.FirebaseStorageService;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -39,8 +39,7 @@ public class PedidosController {
         return "/pedidos/modifica";
     }
 
-    @Autowired
-    private FirebaseStorageService firebaseStorageService;
+  
     
     @PostMapping("/guardar")
     public String pedidosGuardar(Pedidos pedidos) {        
