@@ -10,9 +10,13 @@ grant all privileges on pasteleria.* to 'pasteleria_user'@'%';
 flush privileges;
 
 Create table pasteleria.pedidos(
-numero_pedido int not null,
+numero_pedido int not null auto_increment,
 nombre_cliente varchar(30) not null,
 telefono int not null,
 fecha_entrega varchar (40),
 descripcion varchar (80) not null,
 primary key (numero_pedido))
+
+INSERT INTO pasteleria.pedidos (numero_pedido,nombre_cliente,telefono,fecha_entrega,descripcion) VALUES 
+(1,'Milagro','5555555','12/12/2019','pastel con relleno de chocolate'),
+(2,'Andrea','6666666','20/12/2019','pastel con relleno de vainilla');

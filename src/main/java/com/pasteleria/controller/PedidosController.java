@@ -3,8 +3,7 @@ package com.pasteleria.controller;
 
 import com.pasteleria.domain.Pedidos;
 import com.pasteleria.service.PedidosService;
-
-
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,16 +23,15 @@ public class PedidosController {
     @Autowired
     private PedidosService pedidosService;
     
-//    @GetMapping ("/listado")
-//    public String listado(Model model){
-//        
-////        
-////        List<Pedidos> pedidos = pedidosService.getPedidos(false);
-////        model.addAttribute("pedidos",pedidos);
-////        model.addAttribute("totalpedidos",pedidos.size());
-////        return "/pedidos/listado";
-//        
-//    }
+    @GetMapping ("/listado")
+    public String listado(Model model){
+        List<Pedidos> pedidos = pedidosService.getPedidos();
+        model.addAttribute("pedidos",pedidos);
+        model.addAttribute("totalpedidos",pedidos.size());
+        return "/pedidos/listado";
+        
+    }
+   
     @GetMapping("/nuevo")
     public String pedidosNuevo(Pedidos pedidos) {
         return "/pedidos/modifica";

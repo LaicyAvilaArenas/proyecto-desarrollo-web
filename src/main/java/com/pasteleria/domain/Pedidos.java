@@ -18,8 +18,9 @@ private static  final long serialVersionUID = 1L;
     private Long numero_pedido;
 private String nombre_cliente;
  private int telefono;
+ private String fecha_entrega;
 private String descripcion;
-private String fecha_entrega;
+
 
     public Pedidos() {
     }
