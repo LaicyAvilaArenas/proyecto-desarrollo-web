@@ -4,6 +4,7 @@ package com.pasteleria.domain;
 
 import jakarta.persistence.*;  
 import java.io.Serializable;
+import java.util.Date;
 import java.util.List;
 import lombok.Data;
 
@@ -17,21 +18,19 @@ private static  final long serialVersionUID = 1L;
   @Column(name="numero_pedido")
     private Long numero_pedido;
 private String nombre_cliente;
- private int telefono;
- private String fecha_entrega;
+ private String telefono;
+ private Date fecha_entrega;
 private String descripcion;
 
 
     public Pedidos() {
     }
 
-    public Pedidos(String nombre_cliente, int telefono, String descripcion, String fecha_entrega) {
+    public Pedidos(String nombre_cliente, String telefono, Date fecha_entrega, String descripcion) {
         this.nombre_cliente = nombre_cliente;
         this.telefono = telefono;
-        this.descripcion = descripcion;
         this.fecha_entrega = fecha_entrega;
+        this.descripcion = descripcion;
     }
-
-
 }
 

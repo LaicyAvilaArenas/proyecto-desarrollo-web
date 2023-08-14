@@ -3,7 +3,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to c
 Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
 */
 /* 
-    Created on : 12 jun 2023, 12:46:47
+    Created on : 12 jun 2023, 12:46:47#9A59AB
     Author     : laicy y Keylin
 */
 
@@ -23,6 +23,21 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
   font-family: cursive;
   color: #9A59AB ;
 }
+.pastel-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px;
+  }
+  .pastel-item {
+    background-color: #f3e6f7; /* Morado claro */
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  .pastel-item:hover {
+    background-color: #f9d4e4; /* Rosado claro al pasar el mouse */
+  }
+
 .parrafo{
     text-align: center;
     color: #9A59AB ;
@@ -68,7 +83,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
 
 .nav-link{
     text-decoration: none;
-    color: #9A59AB;
+     color: #9A59AB;
+}
+.nav-link > h1{
+    text-decoration: none;
+    background-color: #9A59AB;
 }
 .logo{
     font-size: 20px;

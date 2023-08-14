@@ -3,27 +3,26 @@
 Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
 Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
 -->
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns="http://www.w3.org/1999/html"
-      xmlns:th="http://www.thymeleaf.org/1999/xhtml"
-        xmlns:sec="http://www.thymeleaf.org/1999/xhtml/thymeleaf-extras-springsecurity6">
-    <head>
+<html>
+    <head >
         <title>Dulces del Cielo</title>
-        <meta charset="UTF-8"/> 
-        <link th:href="/css/Estilomenuprincipalycategorias.css}" rel="stylesheet" type="text/css"/>  
+        <meta charset="UTF-8"> 
+        <link href="css/Estilomenuprincipalycategorias.css}" rel="stylesheet" type="text/css"/> 
+        
     </head>
+    
     <body>
-        <section th:fragment="pantallaprincipal" class="py-4 mb-4 #9A59AB">
+       
         <header class="header">
             <nav class="nav">
-        <img src="/Imagenes/dulces del cielo logo recortado.jpg" alt="Logo de pasteleria" width="100" />
+        <img src="../Imagenes/dulces del cielo logo recortado.jpg" alt="Logo de pasteleria" width="100" />
         <a class="nav-link logo" >Pastelería y Repostería</a>
         <a class="nav-link logo" > por Luana Marchena</a>
         <ul class="nav-menu">
-            <li class="nav-menu-item"><a class="nav-link nav-menu-link" th:href="principal.html">Inicio</a></li> 
-            <li class="nav-menu-item"><a class="nav-link nav-menu-link" th:href="AcercaDe.html">Acerca de</a></li>     
-            <li class="nav-menu-item"><a class="nav-link nav-menu-link" th:href="MenuTortas.html">Pedidos</a></li> 
-            <li class="nav-menu-item"><a class="nav-link nav-menu-link" th:href="contacto.html">Contacto</a></li>
+            <li class="nav-menu-item"><a class="nav-link nav-menu-link" href="principal.html">Inicio</a></li> 
+            <li class="nav-menu-item"><a class="nav-link nav-menu-link" href="AcercaDe.html">Acerca de</a></li>     
+            <li class="nav-menu-item"><a class="nav-link nav-menu-link" href="MenuTortas.html">Pedidos</a></li> 
+            <li class="nav-menu-item"><a class="nav-link nav-menu-link" href="contacto.html">Contacto</a></li>
             <li class="nav-menu-item"><a class="nav-link nav-menu-link" href="https://www.instagram.com/dulcesdelcielo_cr/" target="_blank">Instagram</a></li> 
             <li class="nav-menu-item"><a class="nav-link nav-menu-link" href="https://www.facebook.com/search/top?q=dulces%20del%20cielo">Facebook</a></li>
             
@@ -33,11 +32,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <br>
         
         <article class="opciones-nav-imagenes">
-        <img src="/Imagenes/pastel de inicio rosa happy.jpg" alt="happy" width="500" height="300"/>
-        <img src="/Imagenes/tartaletas de frutas.jpg" alt="tartaletas" width="500" height="300"/>
-        <img src="/Imagenes/macarronscaja.jpg" alt="macarrons" width="500" height="300"/>
-        <img src="/Imagenes/cupcake mora frambuesa.jpg" alt="cupcake" width="500" height="300"/>
-        <img src="/Imagenes/galletas inicial.jpg" alt="galletas" width="500" height="300"/>
+        <img src="Imagenes/pastel de inicio rosa happy.jpg" alt="happy" width="500" height="300"/>
+        <img src="Imagenes/tartaletas de frutas.jpg" alt="tartaletas" width="500" height="300"/>
+        <img src="Imagenes/macarronscaja.jpg" alt="macarrons" width="500" height="300"/>
+        <img src="Imagenes/cupcake mora frambuesa.jpg" alt="cupcake" width="500" height="300"/>
+        <img src="Imagenes/galletas inicial.jpg" alt="galletas" width="500" height="300"/>
         </article>
         <br>
         <article class="promo-felicidad">
@@ -58,7 +57,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         </div>
           
          <div class="promo">
-                <img src="/Imagenes/jueves de promociones.jpg" alt="promociones" width="400"/>
+                <img src="../Imagenes/jueves de promociones.jpg" alt="promociones" width="400"/>
             </div>     
         </article>
          <br>
@@ -67,11 +66,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <section>
             <article class="opciones-nav">
         
-         <img src="/Imagenes/mini shots oreo.jpg" alt="realiza tu pedido" width="290"/>
+         <img src="../Imagenes/mini shots oreo.jpg" alt="realiza tu pedido" width="290"/>
  
-        <img  src="/Imagenes/pastelera.jpg" alt="conoce a la pastelera" width="290"/>
+        <img  src="../Imagenes/pastelera.jpg" alt="conoce a la pastelera" width="290"/>
        
-        <img src="/Imagenes/pasteles a personalizar.jpg" alt="personaliza tu pastel" width="290"/>
+        <img src="../Imagenes/pasteles a personalizar.jpg" alt="personaliza tu pastel" width="290"/>
         
          </article>
         <article class="refPedidoPasteleraPastel">
@@ -86,36 +85,37 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <br> 
        <article class="opciones-nav">
          
-       <img src="/Imagenes/pastel star wars.jpg" alt="star wars" width="300"/>
-       <img src="/Imagenes/graduacion.jpg" alt="graduacion" width="300"/>
-       <img src="/Imagenes/pastel girasoles.jpg" alt="girasoles" width="300"/>
+       <img src="../Imagenes/pastel star wars.jpg" alt="star wars" width="300"/>
+       <img src="../Imagenes/graduacion.jpg" alt="graduacion" width="300"/>
+       <img src="../Imagenes/pastel girasoles.jpg" alt="girasoles" width="300"/>
        </article>
        <br>
        <br>
        <h2 class="felicidad">Instagram</h2> 
        <br>
        <article class="opciones-nav">
-       <img src="/Imagenes/cupcakes flores.jpg" alt="galletas" width="300"/>
-       <img src="/Imagenes/pastel choco happy.jpg" alt="pastel" width="300" />
-       <img src="/Imagenes/donas moradas con blanco.jpg" alt="donas" width="300"/>
+       <img src="Imagenes/cupcakes flores.jpg" alt="galletas" width="300"/>
+       <img src="Imagenes/pastel choco happy.jpg" alt="pastel" width="300" />
+       <img src="Imagenes/donas moradas con blanco.jpg" alt="donas" width="300"/>
        </article>
         <br>
        <article class="opciones-nav">
-       <img src="/Imagenes/pastel harry potter.jpg" alt="Harry Potter" width="300"/>
-       <img src="/Imagenes/mini shots.jpg" alt="shots" width="300"/>
-       <img src="/Imagenes/donas dulce de leche fresa.jpg" alt="donas" width="300"/>
+       <img src="Imagenes/pastel harry potter.jpg" alt="Harry Potter" width="300"/>
+       <img src="Imagenes/mini shots.jpg" alt="shots" width="300"/>
+       <img src="Imagenes/donas dulce de leche fresa.jpg" alt="donas" width="300"/>
        </article>
         <br>
        <article class="opciones-nav">
-       <img src="/Imagenes/pastel baby shower niña.jpg" alt="baby shower" width="300"/>
-       <img src="/Imagenes/fulbox muestra cajas.jpg" alt="fullbox" width="300"/>
-       <img src="/Imagenes/torta fría 1.jpg" alt="tortas" width="300"/>
+       <img src="Imagenes/pastel baby shower niña.jpg" alt="baby shower" width="300"/>
+       <img src="Imagenes/fulbox muestra cajas.jpg" alt="fullbox" width="300"/>
+       <img src="Imagenes/torta fría 1.jpg" alt="tortas" width="300"/>
        
            
    </article>
    </section>
-    </section>     
+            
     </body>
+ 
     <br>
     <footer class="pie">
         <p class="lead text-center">&copy [[#{plantilla.derechos}]]</p>

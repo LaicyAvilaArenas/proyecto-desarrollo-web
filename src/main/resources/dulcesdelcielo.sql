@@ -12,8 +12,8 @@ flush privileges;
 Create table pasteleria.pedidos(
 numero_pedido int not null auto_increment,
 nombre_cliente varchar(30) not null,
-telefono int not null,
-fecha_entrega varchar (40),
+telefono varchar(10) not null,
+fecha_entrega date,
 descripcion varchar (80) not null,
 primary key (numero_pedido))
 

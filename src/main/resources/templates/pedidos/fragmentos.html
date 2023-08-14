@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org"
-      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6"
+      >
     <head th:replace="~{layout/plantilla :: head}"> 
         <title>Dulces del Cielo</title>
+        <meta charset="UTF-8"/> 
+        <link th:href="/css/Estilomenuprincipalycategorias.css}" rel="stylesheet" type="text/css"/> 
     </head>
     <body>
         <!-- 1 Sección para crear el boton de agregar... llamará a una ventana modal-->
         <section th:fragment="botonesAgregar" class="py-4 mb-4 #9A59AB">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-3" >   
+                    <div style="color: #ffffff" class="col-md-3" >   
                         <button 
                             type="button" 
-                            class="btn btn-primary btn-block" 
+                            class="btn #9A59AB" style="background-color:#9A59AB"
                             data-bs-toggle="modal" 
                             data-bs-target="#agregarPedidos">
-                            <i class="fas fa-plus"></i> [[#{pedidos.agregar}]]
+                            <i  class="fas fa-plus"></i> [[#{pedidos.agregar}]]
                         </button>
                     </div>
                 </div>
@@ -36,23 +39,21 @@
                             <h5 class="modal-title">[[#{pedidos.agregar}]]</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div> 
-                        <form th:action="@{/pedidos/guardar}" th:object="${pedidos}"
-                              method="POST" class="was-validated" enctype="multipart/form-data">
+                        <form th:action="@{/pedidos/guardar}" th:object="${pedidos}" method="POST" class="was-validated" enctype="multipart/form-data">
                             <div class="modal-body">
-                                <div class="mb-3">
-                                    <label for="cliente">[[#{pedidos.nombre_cliente}]]</label>
+                              <div class="mb-3">
+                                     
+                                    <label for="nombre_cliente">[[#{pedidos.nombre_cliente}]]</label>
                                     <input type="text" class="form-control" name="nombre_cliente" required="true"/>
                                 </div>
                                 <div class="mb-3">
                                     <label for="telefono">[[#{pedidos.telefono}]]</label>
-                                    <input class="form-check-input" type="number" name="telefono"/>
+                                    <input class="text" type="number" name="telefono"/>
                                 </div>
-                                
                                 <div class="mb-3">
-                                    <label for="fechaEntrega">[[#{pedidos.fecha_entrega}]]</label>
-                                    <input type="text" class="form-control" name="fecha_entrega" required="true"/>
+                                    <label for="fecha_entrega">[[#{pedidos.fecha_entrega}]]</label>
+                                    <input type="date" class="form-control" name="fecha_entrega" required="true"/>
                                 </div>
-                                
                                 <div class="mb-3">
                                     <label for="descripcion">[[#{pedidos.descripcion}]]</label>
                                     <input type="text" class="form-control" name="descripcion" required="true"/>
@@ -69,16 +70,17 @@
 
         <!-- 3 Sección principal para mostrar la informaccion de la entidad pedidos -->
         <section th:fragment="listadoPedidos" id="pedidos">
+            
             <div class="container">
                 <div class="row">
-                    <div class="col-md-9">
+                    <div 
                         <div class="card">
                             <div class="card-header">
                                 <h4>[[#{pedidos.listado}]]</h4>
                             </div>
                             <div th:if="${pedidos != null and !pedidos.empty}">
                                 <table class="table table-striped table-hover">
-                                    <thead class="table-dark">
+                                    <thead class="pastel-item">
                                         <tr><th>#</th>
                                             <th>[[#{pedidos.nombre_cliente}]]</th>
                                             <th>[[#{pedidos.telefono}]]</th>
@@ -87,7 +89,7 @@
                                             </tr>
                                     </thead>
                                     <tbody>
-                                        <tr th:each="pedidos, contador : ${pedidos}">
+                                        <tr style="background-color:#F6A5D3" th:each="pedidos, contador : ${pedidos}">
                                             <td>[[${contador.count}]]</td>
                                             <td>[[${pedidos.nombre_cliente}]]</td>
                                             <td>[[${pedidos.telefono}]]</td>
@@ -104,14 +106,6 @@
                             </div>
                             <div class="text-center p-2" th:if="${pedidos == null or pedidos.empty}">
                                 <span>[[#{lista.vacia}]]</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card text-center bg-success text-white mb-3">
-                            <div class="card-body">
-                                <h3>[[#{pedidos.total}]]</h3>
-                                <h4 class="fs-2"><i class="fas fa-users"></i> [[${TotalPedidos}]]</h4>
                             </div>
                         </div>
                     </div>
@@ -142,9 +136,9 @@
                                             </div>
                                             <div class="card-body">
                                               <div class="mb-3">
-                                                    <label for="cliente">[[#{pedidos.nombre_cliente}]]</label>
+                                                    <label for="nombre_cliente">[[#{pedidos.nombre_cliente}]]</label>
                                                     <input type="text" class="form-control" 
-                                                           name="cliente" th:field="*{cliente}"
+                                                           name="cliente" th:field="*{nombre_cliente}"
                                                            required="true">
                                                 </div>  
                                                 <div class="mb-3">
@@ -154,9 +148,9 @@
                                                            required="true">
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label for="fechaEntrega">[[#{pedidos.fecha_entrega}]]</label>
-                                                    <input type="text" class="form-control" 
-                                                           name="fechaEntrega" th:field="*{fechaEntrega}"
+                                                    <label for="fecha_entrega">[[#{pedidos.fecha_entrega}]]</label>
+                                                    <input type="date" class="form-control" 
+                                                           name="fecha_entrega" th:field="*{fecha_entrega}"
                                                            required="true">
                                                 </div> 
                                                 
