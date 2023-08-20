@@ -26,9 +26,9 @@
             </div>
         </section>
 
-        <!-- 2 Fragmento para agregar pedidos, es la ventana modal -->
+        <!-- 2 Fragmento para agregar utensilios, es la ventana modal -->
         <section th:fragment="agregarAdministradores">
-            <div id="agregarAdmnistradores" 
+            <div id="agregarAdministradores" 
                  class="modal fade" 
                  tabindex="-1" 
                  aria-labelledby="exampleModalLabel" 
@@ -41,12 +41,11 @@
                         </div> 
                         <form th:action="@{/administradores/guardar}" th:object="${administradores}" method="POST" class="was-validated" enctype="multipart/form-data">
                             <div class="modal-body">
-                              <div class="mb-3">
-                                     
+                              
+                                <div class="mb-3">
                                     <label for="nombre_admin">[[#{administradores.nombre_admin}]]</label>
                                     <input type="text" class="form-control" name="nombre_admin" required="true"/>
                                 </div>
-                                
                             </div>
                             <div class="modal-footer">
                                 <button class="btn btn-primary" type="submit">Guardar</button>
@@ -57,7 +56,7 @@
             </div>
         </section>
 
-        <!-- 3 Sección principal para mostrar la informaccion de la entidad pedidos -->
+        <!-- 3 Sección principal para mostrar la informaccion de la entidad utensilios -->
         <section th:fragment="listadoAdministradores" id="administradores">
             
             <div class="container">
@@ -72,13 +71,14 @@
                                     <thead class="pastel-item">
                                         <tr><th>#</th>
                                             <th>[[#{administradores.nombre_admin}]]</th>
+                                           
                                             </tr>
                                     </thead>
                                     <tbody>
                                         <tr style="background-color:#F6A5D3" th:each="administradores, contador : ${administradores}">
                                             <td>[[${contador.count}]]</td>
                                             <td>[[${administradores.nombre_admin}]]</td>
-                                           
+                                          
                                             <td><a th:href="@{/administradores/eliminar/}+${administradores.numero_admin}"
                                                    class="btn btn-danger">
                                                     <i class="fas fa-trash"></i> [[#{accion.eliminar}]]</a>
@@ -119,14 +119,14 @@
                                                 <h4>[[#{accion.actualizar}]]</h4>
                                             </div>
                                             <div class="card-body">
-                                              <div class="mb-3">
+                                                
+                                                <div class="mb-3">
                                                     <label for="nombre_admin">[[#{administradores.nombre_admin}]]</label>
                                                     <input type="text" class="form-control" 
                                                            name="nombre_admin" th:field="*{nombre_admin}"
                                                            required="true">
-                                                </div>  
+                                                </div>
                                                 
-                                               
                                             </div>
                                         </div>
                                     </div>

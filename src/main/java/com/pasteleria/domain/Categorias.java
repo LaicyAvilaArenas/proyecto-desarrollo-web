@@ -14,7 +14,7 @@ public class Categorias {
     private static  final long serialVersionUID = 1L;   
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-  @Column(name="numero_categoria")  
+  @Column(name="numero_categoria")
     private Long numero_categoria;
     private String tipo_categoria;
     private String nombre_categoria;

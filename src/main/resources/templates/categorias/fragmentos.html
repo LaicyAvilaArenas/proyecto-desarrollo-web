@@ -40,17 +40,16 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div> 
                         <form th:action="@{/categorias/guardar}" th:object="${categorias}" method="POST" class="was-validated" enctype="multipart/form-data">
+                            
                             <div class="modal-body">
-                              <div class="mb-3">
-                                     
+                                <div class="mb-3">
                                     <label for="tipo_categoria">[[#{categorias.tipo_categoria}]]</label>
                                     <input type="text" class="form-control" name="tipo_categoria" required="true"/>
                                 </div>
-                                <div class="mb-3">
+                              <div class="mb-3">
                                     <label for="nombre_categoria">[[#{categorias.nombre_categoria}]]</label>
-                                    <input class="text" class="form-control" name="nombre_categoria" required="true"/>
+                                    <input type="text" class="form-control" name="nombre_categoria" required="true"/>
                                 </div>
-                                
                             </div>
                             <div class="modal-footer">
                                 <button class="btn btn-primary" type="submit">Guardar</button>
@@ -76,8 +75,7 @@
                                     <thead class="pastel-item">
                                         <tr><th>#</th>
                                             <th>[[#{categorias.tipo_categoria}]]</th>
-                                            <th>[[#{categorias.nombre_categoria}]]</th>
-                                            
+                                           <th>[[#{categorias.nombre_categoria}]]</th>
                                             </tr>
                                     </thead>
                                     <tbody>
@@ -126,18 +124,18 @@
                                                 <h4>[[#{accion.actualizar}]]</h4>
                                             </div>
                                             <div class="card-body">
-                                              <div class="mb-3">
+                                                <div class="mb-3">
                                                     <label for="tipo_categoria">[[#{categorias.tipo_categoria}]]</label>
                                                     <input type="text" class="form-control" 
-                                                           name="tipo_categoria" th:field="*{tipo_categoria}"
+                                                           name="categorias" th:field="*{tipo_categoria}"
                                                            required="true">
-                                                </div>  
-                                                <div class="mb-3">
+                                                </div> 
+                                              <div class="mb-3">
                                                     <label for="nombre_categoria">[[#{categorias.nombre_categoria}]]</label>
                                                     <input type="text" class="form-control" 
-                                                           name="nombre_categoria" th:field="*{nombre_categoria}"
+                                                           name="categorias" th:field="*{nombre_categoria}"
                                                            required="true">
-                                                </div>
+                                                </div>  
                                             </div>
                                         </div>
                                     </div>

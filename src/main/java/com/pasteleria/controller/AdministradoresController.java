@@ -23,7 +23,7 @@ public class AdministradoresController {
     public String listado(Model model) {
         List<Administradores> administradores = administradoresService.getAdministradores();
         model.addAttribute("administradores", administradores);
-        model.addAttribute("totaladministradores", administradores.size());
+        
         return "/administradores/listado";
 
     }
