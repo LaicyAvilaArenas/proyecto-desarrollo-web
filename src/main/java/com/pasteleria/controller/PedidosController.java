@@ -1,4 +1,3 @@
- 
 package com.pasteleria.controller;
 
 import com.pasteleria.domain.Pedidos;
@@ -13,34 +12,29 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.ui.Model;
 
-
-
-
 @Controller
 @RequestMapping("/pedidos")
 public class PedidosController {
- 
+
     @Autowired
     private PedidosService pedidosService;
-    
-    @GetMapping ("/listado")
-    public String listado(Model model){
+
+    @GetMapping("/listado")
+    public String listado(Model model) {
         List<Pedidos> pedidos = pedidosService.getPedidos();
-        model.addAttribute("pedidos",pedidos);
-        model.addAttribute("totalpedidos",pedidos.size());
+        model.addAttribute("pedidos", pedidos);
+        model.addAttribute("totalpedidos", pedidos.size());
         return "/pedidos/listado";
-        
+
     }
-   
+
     @GetMapping("/nuevo")
     public String pedidosNuevo(Pedidos pedidos) {
         return "/pedidos/modifica";
     }
 
-  
-    
     @PostMapping("/guardar")
-    public String pedidosGuardar(Pedidos pedidos) {        
+    public String pedidosGuardar(Pedidos pedidos) {
         pedidosService.save(pedidos);
         return "redirect:/pedidos/listado";
     }
@@ -56,5 +50,6 @@ public class PedidosController {
         pedidos = pedidosService.getPedidos(pedidos);
         model.addAttribute("pedidos", pedidos);
         return "/pedidos/modifica";
-    }  
+    }
+
 }

@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org/1999/xhtml"
-      xmlns:sec="http://www.thymeleaf.org/1999/xhtml/thymeleaf-extras-springsecurity6">
+      xmlns:th="http://www.thymeleaf.org/1999/xhtml">
     <head th:replace="~{layout/plantilla :: head}">
         <title>Dulces del Cielo</title>
-        <link th:href="/css/Estilomenuprincipalycategorias.css}" rel="stylesheet" type="text/css"/> 
+        
+        
     </head>
     <body>
         <header th:replace="~{layout/plantilla :: header}"></header><!-- comment -->
-
+        
+        
+        <section th:replace="~{productos/fragmentos :: EditarProductos}"></section>
+        
+        
+        
+        
         <footer th:replace="~{layout/plantilla :: footer}"></footer>
     </body>
 </html>

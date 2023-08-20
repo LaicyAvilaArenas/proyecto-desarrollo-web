@@ -4,7 +4,7 @@ package com.pasteleria.domain;
 
 import jakarta.persistence.*;  
 import java.io.Serializable;
-import java.util.Date;
+import java.sql.Date;
 import java.util.List;
 import lombok.Data;
 

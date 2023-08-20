@@ -95,8 +95,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
     padding: 0 40px;
     line-height: 80px;
 }
-
-
 .nav-menu{
     display: flex;
     margin-right: 40px;
@@ -226,7 +224,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
 .refPedidoPasteleraPastel{
     display: flex; 
     text-align: center;
-    background-color:#ffffff ;
+    background-color:#ffffff;
     justify-content: space-between;
     color: #9A59AB;
 }

@@ -4,7 +4,7 @@
  */
 package com.pasteleria.service.impl;
 
-import com.tienda.service.ReporteService;
+import com.pasteleria.service.ReporteService;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;

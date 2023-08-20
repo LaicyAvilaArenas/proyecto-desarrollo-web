@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org/1999/xhtml"
+        xmlns:sec="http://www.thymeleaf.org/1999/xhtml/thymeleaf-extras-springsecurity6">
+    <head th:replace="~{layout/plantilla :: head}">
+        <title>Dulces del Cielo</title>
+        
+        
+    </head>
+    <body>
+        <header th:replace="~{layout/plantilla :: header}"></header>
+        
+        <section th:replace="~{pasteles/fragmentos :: botonesAgregar}"></section>
+        <section th:replace="~{pasteles/fragmentos :: agregarPasteles}"></section>
+        <section th:replace="~{pasteles/fragmentos :: listadoPasteles}"></section>
+        
+        
+        <footer th:replace="~{layout/plantilla :: footer}"></footer>
+    </body>
+</html>
